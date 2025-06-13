@@ -1,0 +1,13 @@
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure subscription 1(ae8cac39-6af7-465e-8ba2-d7d183fa081e)'
+    subscriptionId: 'ae8cac39-6af7-465e-8ba2-d7d183fa081e'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'vmgroups'
+    location: 'Canada Central'
+    templateLocation: 'Linked artifact'
+    csmFile: 'Aks-dev'
+    deploymentMode: 'Incremental'
+
